@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  width:100vh;
+  height: 100%;
+  background: lightgreen;
+}
+.main{
+  width: 100%;
+  max-width: 400px;
+  background:yellow;
+  border-radius: 5px;
+  padding: 25px;
+  margin-left:68%;
+  margin-top:15%;
+  transition: all 0.3s ease;
+}
+.main header{
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+}
+.main .inputfield{
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+.inputfield input{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17.5px;
+  border-radius: 3px;
+  padding-left: 15px;
+
+}
+.inputfield button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background:#e53935;
+  font-size: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+  color: white;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.inputfield button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+.main .todo_list{
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todo_list li{
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+.todo_list li span{
+  position: absolute;
+  right: -45px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  text-align: center;
+  width: 45px;
+  background: orange;
+  transition: all 0.3s ease;
+}
+.todo_list li:hover span{
+  right:0;
+}
+.main .footer{
+  display: flex;
+  width: 100%;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: space-between;
+  font-style: italic;
+}
+.footer button{
+  border: none;
+  outline: none;
+  background: #ad1457;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+  color: white;
+  padding: 6px 10px;
+}
+.footer button.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive media query start */
+@media (max-width:600px){
+  .main{
+    margin-left: 10%;
+    transition: all 0.3s ease;
+  }
+  }
